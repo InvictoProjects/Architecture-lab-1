@@ -1,4 +1,4 @@
-Laboratory work 1 for Software Architecture
+Laboratory work 1 in the discipline of Software Architecture
 
 Our team:
 * [Koroliuk Yaroslav](https://github.com/Koroliuk)

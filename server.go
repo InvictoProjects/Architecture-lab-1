@@ -13,13 +13,11 @@ func main() {
 	err := http.ListenAndServe(":8795", nil)
 	if err != nil {
 		fmt.Println("An error has occurred. The server is down...")
-		return
 	}
 }
 
 func handler(writer http.ResponseWriter, _ *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
-	writer.WriteHeader(http.StatusOK)
 	resp := map[string]string{
 		"time": time.Now().Format(time.RFC3339),
 	}
@@ -27,7 +25,5 @@ func handler(writer http.ResponseWriter, _ *http.Request) {
 	_, err := writer.Write(jsonResp)
 	if err != nil {
 		fmt.Println("An error occurred while sending the json")
-		return
 	}
-	return
 }
